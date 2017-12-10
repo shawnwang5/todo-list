@@ -1,0 +1,38 @@
+/** start reset.scss **/
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+p, dl, dt, dd, ul, li, td, h1, h2, h3, h4, h5, h6, button {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  vertical-align: top;
+  border: 0;
+  outline: none;
+  background-color: #FFF;
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea {
+  outline: none;
+  border-width: 1px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** end reset.scss **/

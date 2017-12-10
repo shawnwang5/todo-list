@@ -1,0 +1,34 @@
+.layout.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & > app-header {
+    display: flex;
+  }
+
+  & > .app-content {
+    flex: 1;
+    display: flex;
+
+    & > .page-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+
+      & > .page-wrapper {
+        flex: 1;
+        padding: 10px 20px;
+        position: relative;
+        display: flex;
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    /deep/ header > .left-side > .brand > .brand-label {
+      display: none;
+    }
+  }
+}

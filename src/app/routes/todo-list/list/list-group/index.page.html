@@ -1,0 +1,11 @@
+<div class="list-group">
+    <div class="list-item" *ngFor="let todoItem of todoList">
+        <div class="checkbox-wrapper">
+            <mat-checkbox [checked]="todoItem.isCompleted" (change)="onCheckboxChanged(todoItem, $event)">{{
+                todoItem.name }}
+            </mat-checkbox>
+            <i class="icon icon-message" (click)="onAddMemoClick(todoItem)"></i>
+        </div>
+        <button mat-button (click)="onReadMemoClick(todoItem)">查看备注</button>
+    </div>
+</div>

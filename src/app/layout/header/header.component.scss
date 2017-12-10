@@ -1,0 +1,55 @@
+@import "../../shared/scss/variables.scss";
+
+$footSize: 16px;
+$lineHeight: 40px;
+header {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  background-color: #00BCD4;
+  color: #FFFFFF;
+  font-size: $footSize;
+
+  /deep/ .mat-button {
+    line-height: $lineHeight;
+
+    .mat-button-ripple, .mat-button-focus-overlay {
+      line-height: $lineHeight;
+      height: $lineHeight;
+    }
+  }
+
+  & > .left-side {
+    display: flex;
+
+    & > .brand {
+      line-height: $lineHeight;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      .icon.icon-task {
+        margin-top: 5px;
+        font-size: 30px;
+      }
+    }
+
+    & > nav {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  & > .right-side {
+    .icon-github {
+      vertical-align: top;
+      margin-top: 10px;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+}

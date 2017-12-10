@@ -1,0 +1,6 @@
+<div class="page animated fadeIn">
+    <mat-form-field>
+        <input matInput placeholder="请输入任务名" #taskNameInput (keyup.enter)="onNameEnter(taskNameInput.value)">
+    </mat-form-field>
+    <app-list-group [todoList]="todoList$ | async"></app-list-group>
+</div>

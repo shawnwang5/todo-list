@@ -1,0 +1,36 @@
+$lineHeight: 40px;
+:host {
+  width: 300px;
+}
+
+.list-group {
+  /deep/ .mat-button {
+    line-height: $lineHeight;
+  }
+  /deep/ mat-checkbox {
+    &.mat-checkbox-checked {
+      text-decoration: line-through;
+      color: #757575;
+    }
+
+    .mat-checkbox-layout {
+      margin-bottom: 0;
+    }
+
+    .mat-checkbox-label {
+      line-height: $lineHeight;
+    }
+  }
+
+  .list-item {
+    line-height: $lineHeight;
+    display: flex;
+    justify-content: space-between;
+
+    .icon.icon-message {
+      cursor: pointer;
+      font-size: 16px;
+      padding: 12px;
+    }
+  }
+}
