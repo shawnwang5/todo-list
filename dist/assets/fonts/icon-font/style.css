@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'iconfont';
-    src: url('fonts/iconfont.ttf?1u970i') format('truetype'),
-    url('fonts/iconfont.woff?1u970i') format('woff'),
-    url('fonts/iconfont.svg?1u970i#iconfont') format('svg');
+    src: url('fonts/iconfont.ttf?vd73wo') format('truetype'),
+    url('fonts/iconfont.woff?vd73wo') format('woff'),
+    url('fonts/iconfont.svg?vd73wo#iconfont') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,14 +22,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-trash-basket:before {
+    content: "\e903";
+}
 .icon-task:before {
     content: "\e902";
 }
-
 .icon-message:before {
     content: "\e901";
 }
-
 .icon-github:before {
     content: "\e900";
 }

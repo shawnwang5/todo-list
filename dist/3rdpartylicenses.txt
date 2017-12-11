@@ -261,11 +261,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-sweetalert@2.0.8
+@ngrx/store-devtools@4.1.1
 MIT
 The MIT License (MIT)
 
-Copyright (c) 2014-present Tristan Edwards
+Copyright (c) 2017 Brandon Roberts, Mike Ryan, Victor Savkin, Rob Wormald
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -285,11 +285,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-@ngrx/store-devtools@4.1.1
+sweetalert@2.0.8
 MIT
 The MIT License (MIT)
 
-Copyright (c) 2017 Brandon Roberts, Mike Ryan, Victor Savkin, Rob Wormald
+Copyright (c) 2014-present Tristan Edwards
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

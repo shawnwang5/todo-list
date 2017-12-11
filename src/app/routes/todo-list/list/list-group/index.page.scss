@@ -11,6 +11,10 @@ $lineHeight: 40px;
     &.mat-checkbox-checked {
       text-decoration: line-through;
       color: #757575;
+
+      .mat-checkbox-background {
+        background-color: #4caf50;
+      }
     }
 
     .mat-checkbox-layout {
@@ -19,6 +23,23 @@ $lineHeight: 40px;
 
     .mat-checkbox-label {
       line-height: $lineHeight;
+      word-break: break-all;
+      white-space: normal;
+      width: 100%;
+      overflow: hidden;
+
+      .label-title {
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .label-desc {
+        line-height: 24px;
+      }
     }
   }
 
@@ -27,10 +48,34 @@ $lineHeight: 40px;
     display: flex;
     justify-content: space-between;
 
-    .icon.icon-message {
-      cursor: pointer;
-      font-size: 16px;
-      padding: 12px;
+    & > .checkbox-wrapper {
+      flex: 1;
+      overflow: hidden;
+    }
+    & > .right-side.options {
+      flex: 0 0 80px;
+      display: flex;
+    }
+
+    .btn.btn-default.memo {
+      padding: 0;
+      background-color: transparent;
+
+      .icon.icon-message {
+        cursor: pointer;
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+
+    .btn.delete {
+      background-color: transparent;
+      font-size: 20px;
+      padding: 0;
+
+      .icon.icon-trash-basket {
+        padding: 10px;
+      }
     }
   }
 }

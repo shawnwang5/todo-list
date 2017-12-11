@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core'
 import { ITodoItem } from '../../../../store/app/model'
-import { MatCheckboxChange } from '@angular/material'
+import { MatCheckboxChange, MatDialog } from '@angular/material'
 import { AppActions } from '../../../../store/app/actions'
-import { autoCloseAlert } from '../../../../utils/swal/swal.utils'
+import { MemoDialogComponent } from './memo.dialog.component'
 
 @Component({
     selector: 'app-list-group',
@@ -13,18 +13,28 @@ import { autoCloseAlert } from '../../../../utils/swal/swal.utils'
 export class ListGroupComponent implements OnInit {
     @Input() todoList: ITodoItem[]
 
-    constructor(private appActions: AppActions) {
+    constructor(private appActions: AppActions, private dialog: MatDialog) {
     }
 
     ngOnInit() {
     }
 
     onAddMemoClick(todoItem) {
-        autoCloseAlert('待开发')
+        const dialogRef = this.dialog.open(MemoDialogComponent, {
+            width: '90%',
+            data: todoItem
+        })
+        dialogRef.afterClosed().subscribe(result => {
+            if (result !== MemoDialogComponent.cancel) {
+                todoItem.memo = result
+                this.appActions.updateTodoList(this.todoList)
+            }
+        })
     }
 
-    onReadMemoClick(todoItem) {
-        autoCloseAlert('待开发')
+    onRemoveClick(todoItem, indexInList) {
+        this.todoList.splice(indexInList, 1)
+        this.appActions.updateTodoList(this.todoList)
     }
 
     onCheckboxChanged(todoItem, checkboxChange: MatCheckboxChange) {

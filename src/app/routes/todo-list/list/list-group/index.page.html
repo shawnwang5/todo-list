@@ -1,12 +1,19 @@
 <div class="list-group" *ngIf="todoList?.length > 0; else noDataTpl">
-    <div class="list-item" *ngFor="let todoItem of todoList">
+    <div class="list-item" *ngFor="let todoItem of todoList; let indexInList = index">
         <div class="checkbox-wrapper">
-            <mat-checkbox [checked]="todoItem.isCompleted" (change)="onCheckboxChanged(todoItem, $event)">{{
-                todoItem.name }}
+            <mat-checkbox [checked]="todoItem.isCompleted" (change)="onCheckboxChanged(todoItem, $event)">
+                <h4 class="label-title">{{ todoItem.name }}</h4>
+                <p class="label-desc" *ngIf="todoItem.memo">{{ todoItem.memo }}</p>
             </mat-checkbox>
-            <i class="icon icon-message" (click)="onAddMemoClick(todoItem)"></i>
         </div>
-        <button mat-button (click)="onReadMemoClick(todoItem)">查看备注</button>
+        <div class="right-side options">
+            <button class="btn btn-default memo" (click)="onAddMemoClick(todoItem)">
+                <i class="icon icon-message"></i>
+            </button>
+            <button class="btn btn-default delete" (click)="onRemoveClick(todoItem, indexInList)">
+                <i class="icon icon-trash-basket"></i>
+            </button>
+        </div>
     </div>
 </div>
 <ng-template #noDataTpl>
