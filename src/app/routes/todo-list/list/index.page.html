@@ -1,6 +1,6 @@
 <div class="page animated fadeIn">
     <mat-form-field>
-        <input matInput placeholder="请输入任务名，按Enter/Return完成" [(ngModel)]="taskName" #taskNameInput
+        <input type="text" matInput placeholder="请输入任务名，按Enter/Return完成" [(ngModel)]="taskName" #taskNameInput
                (keyup.enter)="onNameEnter()">
     </mat-form-field>
     <app-list-group [todoList]="todoList$ | async"></app-list-group>

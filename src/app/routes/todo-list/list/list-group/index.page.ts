@@ -21,7 +21,7 @@ export class ListGroupComponent implements OnInit {
 
     onAddMemoClick(todoItem) {
         const dialogRef = this.dialog.open(MemoDialogComponent, {
-            width: '90%',
+            width: '300px',
             data: todoItem,
             autoFocus: false
         })

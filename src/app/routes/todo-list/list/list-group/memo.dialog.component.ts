@@ -6,7 +6,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material'
     template: `
         <h2 mat-dialog-title>任务备注</h2>
         <mat-dialog-content>
-            <input class="form-control" [(ngModel)]="data.memo">
+            <mat-form-field>
+                <input type="text" matInput [(ngModel)]="data.memo">
+            </mat-form-field>
         </mat-dialog-content>
         <mat-dialog-actions>
             <button mat-button [mat-dialog-close]="data.memo">确定</button>
@@ -15,7 +17,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material'
     `,
     styles: [
             `
-            mat-dialog-actions {
+            .mat-dialog-title {
+                margin-bottom: 10px;
+            }
+            .mat-dialog-title, mat-dialog-content, mat-dialog-actions {
                 display: flex;
                 justify-content: center;
             }
