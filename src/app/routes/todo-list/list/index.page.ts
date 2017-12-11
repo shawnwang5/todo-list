@@ -11,6 +11,7 @@ import { AppActions } from '../../../store/app/actions'
 })
 export class TodoListPageComponent implements OnInit, OnDestroy {
     @ViewChild('taskNameInput') taskNameInput
+    taskName = ''
 
     todoList$: any
     subscriberArray: any[] = []
@@ -26,16 +27,16 @@ export class TodoListPageComponent implements OnInit, OnDestroy {
         this.subscriberArray.forEach(item => item.unsubscribe())
     }
 
-    onNameEnter(taskName) {
+    onNameEnter() {
         const todoItem: ITodoItem = {
-            name: taskName,
+            name: this.taskName,
             isCompleted: false,
             memo: '',
             createDate: DateUtils.format(new Date(), 'YYYY-MM-DD'),
             completedDate: ''
         }
         this.appActions.addTodoItem(todoItem)
-        this.taskNameInput.nativeElement.value = ''
+        this.taskName = ''
         this.taskNameInput.nativeElement.blur()
     }
 }
