@@ -22,7 +22,8 @@ export class ListGroupComponent implements OnInit {
     onAddMemoClick(todoItem) {
         const dialogRef = this.dialog.open(MemoDialogComponent, {
             width: '90%',
-            data: todoItem
+            data: todoItem,
+            autoFocus: false
         })
         dialogRef.afterClosed().subscribe(result => {
             if (result !== MemoDialogComponent.cancel) {

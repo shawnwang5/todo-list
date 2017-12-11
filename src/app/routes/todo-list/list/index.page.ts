@@ -12,7 +12,6 @@ import { AppActions } from '../../../store/app/actions'
 export class TodoListPageComponent implements OnInit, OnDestroy {
     @ViewChild('taskNameInput') taskNameInput
     taskName = ''
-
     todoList$: any
     subscriberArray: any[] = []
 
