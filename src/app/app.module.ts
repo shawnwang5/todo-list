@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component'
 import { RoutesModule } from './routes/routes.module'
 import { LayoutModule } from './layout/layout.module'
-import { CoreModule } from './core/core.module'
 import { StoreModule } from '@ngrx/store'
 import { appReducer } from './store/app/reducer'
 import { MyStoreModule } from './store/index.module'
@@ -15,7 +14,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
         RoutesModule,
         LayoutModule,
         MyStoreModule,
-        CoreModule,
         BrowserAnimationsModule,
         StoreModule.forRoot({
             app: appReducer

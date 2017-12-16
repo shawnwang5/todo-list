@@ -1,6 +1,5 @@
 export interface IAppState {
     todoList: ITodoItem[],
-    test: number
 }
 
 export interface ITodoItem {
@@ -12,6 +11,5 @@ export interface ITodoItem {
 }
 
 export const initialState: IAppState = {
-    test: 0,
     todoList: []
 }

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core'
+import { Component, OnInit, ViewChild } from '@angular/core'
 import { IAppState, ITodoItem } from '../../../store/app/model'
 import { Store } from '@ngrx/store'
 import { DateUtils } from '../../../utils/date/date.utils'
@@ -9,21 +9,16 @@ import { AppActions } from '../../../store/app/actions'
     templateUrl: './index.page.html',
     styleUrls: ['./index.page.scss']
 })
-export class TodoListPageComponent implements OnInit, OnDestroy {
+export class TodoListPageComponent implements OnInit {
     @ViewChild('taskNameInput') taskNameInput
     taskName = ''
     todoList$: any
-    subscriberArray: any[] = []
 
     constructor(private store: Store<IAppState>, private appActions: AppActions) {
     }
 
     ngOnInit() {
         this.todoList$ = this.store.select(state => (<any>state).app.todoList)
-    }
-
-    ngOnDestroy(): void {
-        this.subscriberArray.forEach(item => item.unsubscribe())
     }
 
     onNameEnter() {
