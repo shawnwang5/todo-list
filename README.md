@@ -1,13 +1,16 @@
 # todo-list
 A simple todo list app.
 
+# WebSite
+[website](https://todo-list.oss-cn-hangzhou.aliyuncs.com/#/todoList)
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 yarn install
 
-# serve with hot reload at localhost:8080
+# to start deving with livereload site at http://localhost:4201
 npm run start
 
 # build for production with minification

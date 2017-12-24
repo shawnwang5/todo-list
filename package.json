@@ -1,6 +1,6 @@
 {
   "name": "todo-list",
-  "description": "a simple todo list app",
+  "description": "A simple todo list app",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
