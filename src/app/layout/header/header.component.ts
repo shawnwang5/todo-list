@@ -7,6 +7,8 @@ import { Router } from '@angular/router'
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+    githubRepositoryUrl = 'https://github.com/shawnwang5/todo-list'
+
     constructor(private router: Router) {
     }
 
