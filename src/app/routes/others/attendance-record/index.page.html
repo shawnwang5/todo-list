@@ -1,0 +1,33 @@
+<div class="page">
+    <div class="form">
+        <textarea [(ngModel)]="sourceData" title="textarea" placeholder="请输入如下字符串：
+2018-05-28 08:45:02	指纹
+2018-05-28 20:21:31	指纹
+2018-05-29 08:47:34	指纹"></textarea>
+        <button class="btn" (click)="onSubmitBtnClick()">提交</button>
+    </div>
+    <section class="morning-section">
+        <div class="section-wrapper">
+            <p class="title">早上异常：</p>
+            <div class="content">
+                <p *ngFor="let item of morningErrorArray">{{ item }}</p>
+            </div>
+        </div>
+    </section>
+    <section class="evening-section">
+        <div class="section-wrapper">
+            <p class="title">晚上异常：</p>
+            <div class="content">
+                <p *ngFor="let item of eveningErrorArray">{{ item }}</p>
+            </div>
+        </div>
+    </section>
+    <section class="overtime-section">
+        <div class="section-wrapper">
+            <p class="title">加班：</p>
+            <div class="content">
+                <p *ngFor="let item of overtimeArray">{{ item }}</p>
+            </div>
+        </div>
+    </section>
+</div>

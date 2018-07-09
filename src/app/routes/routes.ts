@@ -13,6 +13,7 @@ export const routes: Routes = [
         children: [
             { path: 'todoList', loadChildren: './todo-list/index.module#TodoListModule' },
             { path: 'about', loadChildren: './about/index.module#AboutModule' },
+            { path: 'others', loadChildren: './others/index.module#OthersModule' },
             { path: '', redirectTo: '/todoList', pathMatch: 'full' }
         ]
     },
