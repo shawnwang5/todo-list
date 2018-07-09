@@ -2,7 +2,7 @@
 A simple todo list app.
 
 # WebSite
-[website](https://todo-list.oss-cn-hangzhou.aliyuncs.com/#/todoList)
+[website](https://shawnwang5.github.io/todo-list/dist/#/todoList)
 
 ## Build Setup
 
