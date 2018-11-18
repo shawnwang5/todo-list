@@ -11,10 +11,10 @@ A simple todo list app.
 yarn install
 
 # to start deving with livereload site at http://localhost:4201
-npm run start
+yarn run start
 
 # build for production with minification
-npm run build
+yarn run build
 ```
 
 ### 目录结构
